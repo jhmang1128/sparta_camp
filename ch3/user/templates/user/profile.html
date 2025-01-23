@@ -2,20 +2,13 @@
 
 
 {% block content %}
+  <h1>{{ request.user.username}}, profile </h1>
 
-  <h1>Post List</h1>
-
-  <a href = "{% url 'post:post_create' %}">
-    새 글 작성하기 </a>
-
-  {% for post in posts %}
-
-    <a href = "{% url 'post:post_detail' post.id %}">
-    <p> [ {{post.id}} ] {{post.title}} </p> </a>
-    <p> {{post.content}} </p>
-    <hr>
-  
-  {% endfor %}
+  <form action=" {% url 'user:profile' %}", method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type='submit'> 회원 정보 수정 </button>
+  </form>
 
   <a href = "{% url 'index' %}">
     <button> 홈으로 돌아가기 </button> </a>

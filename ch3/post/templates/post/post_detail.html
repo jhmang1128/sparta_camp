@@ -7,11 +7,17 @@
 
   <br>
   
-  <p>{{ post.created_at }} </p>
+  <p> 글 번호 : [ {{ post.id }} ] </p>
+  <p> 제목 : {{ post.title }} </p>
+
+  <p> 작성자 : {{ post.author.username }} </p>
+
+  <p> 내용 : {{ post.content }} </p>
+
+  <p> 작성일 : {{ post.created_at }} </p>
   <br>
-  <p> [ {{ post.id }} ] </p>
-  <p>{{ post.title }} </p>
-  <p>{{ post.content }} </p>
+  
+  
   
   <br>
   
