@@ -1,0 +1,11 @@
+user_question : python 기초 문제를 내줘
+좋아요! 파이썬 기초 문제를 하나 내보겠습니다.
+
+다음 코드를 실행했을 때 출력 결과는 무엇인가요?
+
+```python
+num1 = 5
+num2 = 3
+result = num1 + num2
+print(result)
+```
